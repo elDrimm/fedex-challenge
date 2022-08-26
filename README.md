@@ -1,5 +1,13 @@
 # Fedex Web Coding Challenge
 
+This project is the result of a coding challenge for a role at FedEx, it contains a signup form to create a user account.
+
+## Some rules
+* Use the latest version of Angular in combination with TypeScript.
+* UX/UI can be based on a CSS Framework (or do it yourself with minimal effort).
+* You can target browsers that support ES6. Do not worry about supporting old browser versions.
+* Make your solution available on GitHub or GitLab or Bitbucket.
+
 
 ## Development server
 
