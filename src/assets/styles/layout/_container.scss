@@ -2,4 +2,8 @@
   margin: 0 auto;
   width: var(--app-width-min);
   max-width: var(--app-width-max);
+
+  &--sm {
+    max-width: var(--container-sm);
+  }
 }

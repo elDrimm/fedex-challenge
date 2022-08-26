@@ -1,0 +1,29 @@
+.fed-header {
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+
+  background-color: var(--color-primary-400);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+  }
+
+  &__logo {
+    height: 1.75rem;
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+  }
+}

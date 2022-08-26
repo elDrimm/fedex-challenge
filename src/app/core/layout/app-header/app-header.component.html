@@ -1,0 +1,18 @@
+<header class="fed-header">
+  <div class="container">
+    <img
+      class="fed-header__logo"
+      src="assets/images/fedex.png"
+      alt="Fedex logo">
+
+    <nav class="fed-header__nav">
+      <ul>
+        <li *ngFor="let item of navMenu">
+          <a [routerLink]="item.path">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
