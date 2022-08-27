@@ -34,17 +34,19 @@
 
     <div class="input">
       <label for="email">Email</label>
-      <input type="email" formControlName="email" id="email" email placeholder="Ex. john@dough.com" >
+      <input type="email" formControlName="email" id="email" email placeholder="Ex. john@dough.com">
 
       <div class="input__errors">
         <p *ngIf="emailCtrl?.touched && !!emailCtrl?.hasError('required')">Email is required.</p>
-        <p *ngIf="emailCtrl?.touched && !!emailCtrl?.hasError('email')">The email you provided appears to be invalid.</p>
+        <p *ngIf="emailCtrl?.touched && !!emailCtrl?.hasError('email')">The email you provided appears to be
+          invalid.</p>
       </div>
     </div>
 
     <div class="input input--password">
       <label for="password">Password</label>
-      <input type="password" formControlName="password" id="password" placeholder="*********" autocomplete="new-password">
+      <input type="password" formControlName="password" id="password" placeholder="*********"
+             autocomplete="new-password">
 
       <div class="input__errors">
         <p *ngIf="passwordCtrl?.touched && !!passwordCtrl?.hasError('required')">Password is required.</p>
@@ -52,9 +54,30 @@
     </div>
 
     <ul class="signup__form__password-reqs">
-      <li [ngClass]="{'active': !!passwordCtrl?.value && passwordCtrl?.dirty && !passwordCtrl?.hasError('minlength')}">✓ Minimum of 8 characters.</li>
-      <li [ngClass]="{'active': !!passwordCtrl?.value && passwordCtrl?.dirty && !passwordCtrl?.hasError('pattern')}">✓ Must include at lease one lowercase and uppercase letter.</li>
-      <li [ngClass]="{'active': !!passwordCtrl?.value && passwordCtrl?.dirty && !signupForm.hasError('nameIncluded')}">✓ Can't contain your first or last name.</li>
+      <li
+        data-test="password-min-characters"
+        [ngClass]="{
+        'active': !!passwordCtrl?.value && passwordCtrl?.dirty && !passwordCtrl?.hasError('minlength')
+        }"
+      >
+        ✓ Minimum of 8 characters.
+      </li>
+      <li
+        data-test="password-cases"
+        [ngClass]="{
+        'active': !!passwordCtrl?.value && passwordCtrl?.dirty && !passwordCtrl?.hasError('pattern')
+        }"
+      >
+        ✓ Must include at lease one lowercase and uppercase letter.
+      </li>
+      <li
+        data-test="password-names"
+        [ngClass]="{
+        'active': !!passwordCtrl?.value && passwordCtrl?.dirty && !signupForm.hasError('nameIncluded')
+        }"
+      >
+        ✓ Can't contain your first or last name.
+      </li>
     </ul>
 
     <div class="input__errors" *ngIf="errorMessage">
@@ -65,6 +88,18 @@
       class="btn btn--w100"
       type="submit"
       [disabled]="isSubmitting"
-    >Signup now</button>
+    >
+      Signup now
+      <span class="spinner" *ngIf="isSubmitting">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           x="0px" y="0px"
+           viewBox="0 0 367.136 367.136" style="enable-background:new 0 0 367.136 367.136;" xml:space="preserve">
+          <path d="M336.954,87.494C318.821,59.1,293.251,36.318,263.01,21.613l-13.119,26.979c52.77,25.661,85.551,78.029,85.551,136.669
+          c0,83.744-68.131,151.874-151.874,151.874S31.694,269.005,31.694,185.262c0-49.847,24.899-96.439,65.042-124.571L149.7,113.91V0
+          H36.335l38.953,39.14C57.727,52.164,42.557,68.287,30.582,86.871c-18.898,29.33-28.888,63.352-28.888,98.391
+          c0,100.286,81.588,181.874,181.874,181.874s181.874-81.588,181.874-181.874C365.442,150.485,355.59,116.678,336.954,87.494z"/>
+        </svg>
+      </span>
+    </button>
   </form>
 </div>

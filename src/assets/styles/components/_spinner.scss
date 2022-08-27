@@ -1,0 +1,32 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+
+  font-size: 1.5rem;
+  line-height: 1;
+
+  animation: spin 750ms linear infinite;
+  transform-origin: center center;
+
+  svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    path {
+      fill: var(--color-white);
+    }
+  }
+}
+
+

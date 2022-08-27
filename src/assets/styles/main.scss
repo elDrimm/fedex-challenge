@@ -6,8 +6,9 @@
 @use 'layout/body';
 @use 'layout/container';
 
-@use 'components/card';
 @use 'components/button';
+@use 'components/card';
 @use 'components/input';
+@use 'components/spinner';
 
 @use 'pages/signup';
