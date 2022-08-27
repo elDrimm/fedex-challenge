@@ -1,3 +1,12 @@
 <div class="container container--sm">
-  <h1>Signup</h1>
+  <fed-signup-form
+    *ngIf="!successfullySent; else success"
+    (success)="onSuccess($event)"
+  ></fed-signup-form>
+
+  <ng-template #success>
+    <fed-signup-success
+      [user]="user"
+    ></fed-signup-success>
+  </ng-template>
 </div>

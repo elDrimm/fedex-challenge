@@ -1,6 +1,6 @@
 export const environmentBase = {
   api: {
-    baseUrl: 'https://demo-api.now.sh/'
+    baseUrl: 'https://demo-api.now.sh'
   },
 
   routes: {

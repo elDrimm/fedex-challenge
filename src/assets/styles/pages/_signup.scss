@@ -1,0 +1,35 @@
+.signup {
+  &__header {
+    text-align: center;
+
+    &__wave {
+      display: inline-block;
+      font-size: 2rem;
+    }
+
+    &__text {
+      margin-top: 0.5rem;
+      color: var(--color-gray-400);
+    }
+  }
+
+  &__form {
+    margin-top: 2rem;
+
+    .input--password {
+      margin-bottom: 0.5rem;
+    }
+
+    &__password-reqs {
+      margin-bottom: 2rem;
+      margin-left: 0.25rem;
+
+      font-size: 12px;
+      color: var(--color-gray-400);
+
+      li.active {
+        color: var(--color-green-400);
+      }
+    }
+  }
+}

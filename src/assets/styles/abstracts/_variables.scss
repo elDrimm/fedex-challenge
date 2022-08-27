@@ -1,8 +1,13 @@
 :root {
+  --color-primary-300:    #6929b0;
   --color-primary-400:    #4d148c;
   --color-secondary-400:  #ff6200;
   --color-gray-100:       #fafafa;
+  --color-gray-300:       #EEEDF0;
+  --color-gray-400:       #5f5f5f;
   --color-gray-600:       #333333;
+  --color-red-400:        #df2424;
+  --color-green-400:      #5dae01;
   --color-white:          #ffffff;
 
   --font-family:          'Poppins', sans-serif;
@@ -10,6 +15,6 @@
 
   --app-width-min:        95vw;
   --app-width-max:        1400px;
-  --container-sm:         30rem;
+  --container-sm:         32.5rem;
 }
 
